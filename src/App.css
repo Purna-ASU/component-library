@@ -187,7 +187,51 @@ button.button-Pink {
   flex-direction: row;
   justify-content: center;
   margin: 10px;
-  padding: 10px;
+  padding: 30px;
   border: 1px solid #6B7280;
   gap: 10px;
 }
+
+.card-comp {
+  width: 384px;
+  height: 208px;
+  padding: 0px 24px 32px 24px;
+  border-radius: 8px;
+  background-color: #b6cafb;
+  position: relative;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #111827;
+  margin-top: 60px;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #6B7280;
+}
+
+.card-icon {
+  background-color: #3F75FE;
+  width: 44px; 
+  height: 44px; 
+  font-size: 10px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  position: absolute; 
+  top: -17px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+

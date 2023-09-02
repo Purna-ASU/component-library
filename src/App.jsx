@@ -6,6 +6,7 @@ import Card from "./components/Card/card"
 import Testimonials from "./components/testimonials/testimonials"
 
 import bannerData from "./assets/bannerData"
+import { HiOutlineCloudUpload } from "react-icons/hi";
 
 
 function App() {
@@ -39,7 +40,10 @@ function App() {
       </div>
       
       <div className='cardDiv'>
-        <Card />
+        <Card className="card-comp">
+          <h2 className='card-title'>Easy Development</h2>
+          <p className='card-text'>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+        </Card>
       </div>
 
       <Testimonials />

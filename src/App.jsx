@@ -29,9 +29,9 @@ function App() {
         {
           bannerData.map(data => {
             return(
-              <Banner key={data.status} status={data.status} text={data.text} clickHandler={onClick}>
+              <Banner key={data.status} status={data.status} text={data.text} clickHandler={onClick} className="banner-title">
                 {data.title}
-                <p className='banner-text'>{multiLine ? data.text : ""}</p>
+                <p className={`banner-${data.status}-text`}>{multiLine ? data.text : ""}</p>
               </Banner>
             )
           })

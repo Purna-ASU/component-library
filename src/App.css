@@ -114,12 +114,8 @@ button.button-Pink {
 
 .banner {
   width: 850px;
-  height: 80px;
-  top: -192px;
-  left: -919px;
-  padding: 16px;
+  padding: 16px 16px 0px 16px;
   border-radius: 6px;
-  gap: 12px;
 }
 
 .banner-success {
@@ -136,4 +132,48 @@ button.button-Pink {
 
 .banner-error {
   background-color: #FEF2F2;
+}
+
+.banner-success-title {
+  color: #065F46;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.banner-warning-title {
+  color: #92400E;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.banner-error-title {
+  color: #920e19;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.banner-neutral-title {
+  color: #1E40AF;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.banner-success-text {
+  color: #047857;
+  font-size: 15px;
+}
+
+.banner-warning-text {
+  color: #B45309;
+  font-size: 15px;
+}
+
+.banner-error-text {
+  color: #783c3f;
+  font-size: 15px;
+}
+
+.banner-neutral-text {
+  color: #1C51B9;
+  font-size: 15px;
 }

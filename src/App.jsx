@@ -38,7 +38,10 @@ function App() {
         } 
       </div>
       
-      <Card />
+      <div className='cardDiv'>
+        <Card />
+      </div>
+
       <Testimonials />
     </main>
   )

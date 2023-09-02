@@ -177,3 +177,17 @@ button.button-Pink {
   color: #1C51B9;
   font-size: 15px;
 }
+
+
+/* -------------------------------CARD DIVISION STYLINGS------------------------------*/
+
+.cardDiv {
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #6B7280;
+  gap: 10px;
+}

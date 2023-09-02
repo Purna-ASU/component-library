@@ -1,9 +1,16 @@
+import classnames from "classnames"
 
-function button() {
+
+function button({shape, color, children}) {
+
+    let shapeClass = shape && `button-${shape}`
+    let colorClass = color && `button-${color}`
+    const allClassNames = classnames (shapeClass, colorClass)
+
     return (
-        <h1>
-            Buttons
-        </h1>
+        <button className={allClassNames}>
+            {children}
+        </button>
     )
 }
 

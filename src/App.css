@@ -22,4 +22,74 @@ main {
   gap: 10px;
 }
 
+button:active {
+  transform: translateY(1px); 
+}
 
+button.button-Square {
+  background-color: #E5E7EB;
+  color: #4B5563;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 9px 17px;
+  border-radius: 2px;
+  line-height: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button.button-Pill {
+  background-color: #E5E7EB;
+  color: #4B5563;
+  border: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 9px 17px;
+  border-radius: 20px;
+  line-height: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button.button-Indigo {
+  background-color: #E0E0FF;
+  color: indigo;
+}
+
+button.button-Purple {
+  background-color: #E0E0FF; 
+  color: purple;
+}
+
+button.button-Red {
+  background-color: #FFCCCC;
+  color: red;
+}
+
+button.button-Gray {
+  background-color: lightgray;
+  color: gray;
+}
+
+button.button-Yellow {
+  background-color: lightyellow;
+  color: yellow;
+}
+
+button.button-Green {
+  background-color: lightgreen;
+  color: green;
+}
+
+button.button-Blue {
+  background-color: lightblue;
+  color: blue;
+}
+
+button.button-Pink {
+  background-color: lightpink;
+  color: pink;
+}

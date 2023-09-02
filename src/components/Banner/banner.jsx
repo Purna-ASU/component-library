@@ -4,9 +4,8 @@ function banner({children, status, text, clickHandler, ...rest}) {
 
     const bannerClass = "banner";
     const statusClass = status && `banner-${status}`;
-    const textClass = text && `banner-${text}`;
-    const titleClass = rest && `banner-${status}-title`
-    const allClassNames = classnames(bannerClass, statusClass, textClass, titleClass);
+    // const textClass = text && ``;
+    const allClassNames = classnames(bannerClass, statusClass);
 
     return (
         <div className={allClassNames} onClick={clickHandler}>

@@ -32,7 +32,6 @@ function App() {
               <Banner key={data.status} status={data.status} clickHandler={onClick} text={data.text}>
                 <Banner.Title status={data.status}>{data.title}</Banner.Title>
                 <Banner.Text status={data.status}>{multiLine ? data.text : ""}</Banner.Text>
-                
               </Banner>
             )
           })

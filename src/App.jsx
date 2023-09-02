@@ -4,6 +4,8 @@ import Banner from "./components/Banner/banner"
 import Card from "./components/Card/card"
 import Testimonials from "./components/testimonials/testimonials"
 
+import bannerData from "./assets/bannerData"
+
 /* Available Colors : Red, Green, Yellow, Blue, Indigo, Purple, Gray, Pink*/
 
 function App() {
@@ -16,7 +18,19 @@ function App() {
         <Button shape={"Pill"} color={"Red"}> Button </Button>
       </div>
       
-      <Banner />
+      <div className='bannerDiv'>
+        {
+          bannerData.map(data => {
+            return(
+              <Banner key={data.status} status={data.status} text={data.text}>
+                {data.title}
+              </Banner>
+            )
+          })
+        }
+        
+      </div>
+      
       <Card />
       <Testimonials />
     </main>

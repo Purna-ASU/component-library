@@ -1,9 +1,16 @@
+import classnames from "classnames"
 
-function banner() {
+function banner({children, status, text}) {
+
+    const bannerClass = "banner"
+    const statusClass = status && `banner-${status}`;
+    const textClass = text && `banner-${text}`
+    const allClassNames = classnames(bannerClass, statusClass, textClass)
+
     return (
-        <h1>
-            Banners
-        </h1>
+        <div className={allClassNames}>
+            {children}
+        </div>
     )
 }
 

@@ -1,6 +1,6 @@
 import classnames from "classnames"
 
-function banner({children, status, text}) {
+function banner({children, status, text, clickHandler}) {
 
     const bannerClass = "banner"
     const statusClass = status && `banner-${status}`;
@@ -8,7 +8,7 @@ function banner({children, status, text}) {
     const allClassNames = classnames(bannerClass, statusClass, textClass)
 
     return (
-        <div className={allClassNames}>
+        <div className={allClassNames} onClick={clickHandler}>
             {children}
         </div>
     )

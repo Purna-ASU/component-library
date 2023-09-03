@@ -247,6 +247,8 @@ button.button-Pink {
   gap: 10px;
 }
 
+/*--------------WIHT PIC---------------------*/
+
 .testimonial-Back{
   width: 900px;
   height: 200px;
@@ -269,7 +271,7 @@ img {
   color: #FFFFFF;
 }
 
-p {
+.testimonial-text-desc {
   font-size: 18px;
   font-weight: 500;
   line-height: 32px;
@@ -282,3 +284,28 @@ h2 {
   margin-bottom: 0px;
   margin-top: 40px;
 }
+
+/*----------------WITHOUT PIC---------------------*/
+
+.testimonial-Back-without{
+  width: auto;
+  height: 200px;
+  background-color: #FFFFFF;
+}
+
+.testimonial-text-desc-without {
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0em;
+  color: #2545B8;
+  text-align: center;
+}
+
+.testimonial-text-without {
+  color: #2545B8;
+  text-align: center;
+}
+

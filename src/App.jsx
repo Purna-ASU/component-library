@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Button from "./components/Button/button"
 import Banner from "./components/Banner/index"
 import Card from "./components/Card/card"
-import Testimonials from "./components/testimonials/testimonials"
+import Testimonials from "./components/testimonials/index"
 
 import bannerData from "./assets/bannerData"
 import { HiOutlineCloudUpload } from "react-icons/hi";
@@ -12,9 +12,15 @@ import { HiOutlineCloudUpload } from "react-icons/hi";
 function App() {
 
   const [multiLine, setMultiLine] = useState(false)
+  const [pic, setPic] = useState(true)
 
   function onClick() {
     setMultiLine(prevState => !prevState)
+  }
+
+  function clickHandler() {
+    setPic(prevState => !prevState)
+    console.log("CLICKED")
   }
 
   return (
@@ -47,7 +53,12 @@ function App() {
       </div>
 
       <div className='testimonialDiv'>
-        <Testimonials />
+        <Testimonials clickHandler={clickHandler}>
+          { pic ? 
+            <Testimonials.WithPic /> :
+            <Testimonials.WithoutPic />  
+          }
+        </Testimonials>
       </div>  
       
     </main>

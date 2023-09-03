@@ -1,10 +1,11 @@
 import classnames from "classnames"
+import useToggle from "../../hooks/useToggle";
 
 function banner({children, status, text, clickHandler, ...rest}) {
 
+    const [open, toggleOpen] = useToggle()
     const bannerClass = "banner";
     const statusClass = status && `banner-${status}`;
-    // const textClass = text && ``;
     const allClassNames = classnames(bannerClass, statusClass);
 
     return (

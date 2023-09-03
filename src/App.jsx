@@ -6,7 +6,6 @@ import Card from "./components/Card/card"
 import Testimonials from "./components/testimonials/index"
 
 import bannerData from "./assets/bannerData"
-import { HiOutlineCloudUpload } from "react-icons/hi";
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
 
   function clickHandler() {
     setPic(prevState => !prevState)
-    console.log("CLICKED")
   }
 
   return (

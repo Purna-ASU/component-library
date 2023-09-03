@@ -116,6 +116,7 @@ button.button-Pink {
   width: 850px;
   padding: 16px 16px 0px 16px;
   border-radius: 6px;
+  padding: 10px;
 }
 
 .banner-success {

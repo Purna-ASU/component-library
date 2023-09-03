@@ -24,10 +24,10 @@ function App() {
         <Button shape={"Pill"} color={"Green"}> Button </Button>
       </div>
   
-      <BannerContext.Provider  value={{ open, toggleOpen }}>
+      <BannerContext.Provider value={{ open, toggleOpen }}>
       <div className='bannerDiv'>
         {bannerData.map(data => (        
-            <Banner status={data.status} clickHandler={toggleOpen} text={data.text}>
+            <Banner key={data.status} status={data.status} clickHandler={toggleOpen} text={data.text}>
               <Banner.Title status={data.status}>{data.title}</Banner.Title>
               {open && (
                 <Banner.Text status={data.status}>{data.text}</Banner.Text>

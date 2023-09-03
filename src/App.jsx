@@ -46,7 +46,10 @@ function App() {
         </Card>
       </div>
 
-      <Testimonials />
+      <div className='testimonialDiv'>
+        <Testimonials />
+      </div>  
+      
     </main>
   )
 }

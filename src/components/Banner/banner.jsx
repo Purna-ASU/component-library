@@ -1,18 +1,38 @@
-import classnames from "classnames"
-import useToggle from "../../hooks/useToggle";
+// import classnames from "classnames"
+// import { BannerContext } from "../../App";
+// import { useContext } from "react";
 
-function banner({children, status, text, clickHandler, ...rest}) {
+// function Banner({children, status, clickHandler}) {
 
-    const [open, toggleOpen] = useToggle()
-    const bannerClass = "banner";
-    const statusClass = status && `banner-${status}`;
-    const allClassNames = classnames(bannerClass, statusClass);
+//     const bannerClass = "banner";
+//     const statusClass = status && `banner-${status}`;
+//     const allClassNames = classnames(bannerClass, statusClass);
+//     const { open, toggleOpen } = useContext(BannerContext)
 
-    return (
-        <div className={allClassNames} onClick={clickHandler}>
-            {children}
-        </div>
-    )
+//     return (
+//         <div className={allClassNames} onClick={() => toggleOpen()}>
+//             {children}
+//         </div>
+//     )
+// }
+
+// export default Banner;
+
+import classnames from "classnames";
+import { BannerContext } from "../../App";
+import { useContext } from "react";
+
+function Banner({ children, status, clickHandler }) {
+  const bannerClass = "banner";
+  const statusClass = status && `banner-${status}`;
+  const allClassNames = classnames(bannerClass, statusClass);
+  const { open, toggleOpen } = useContext(BannerContext);
+
+  return (
+    <div className={allClassNames} onClick={() => toggleOpen()}>
+      {children}
+    </div>
+  );
 }
 
-export default banner;
+export default Banner;

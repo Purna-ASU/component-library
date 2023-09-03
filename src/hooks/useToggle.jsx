@@ -5,6 +5,7 @@ function useToggle() {
 
     function toggle() {
         setOn(prevState => !prevState)
+        console.log("clicked")
     }
 
     return [on, toggle]

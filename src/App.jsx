@@ -1,17 +1,20 @@
 import './App.css'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import Button from "./components/Button/button"
 import Banner from "./components/Banner/index"
 import Card from "./components/Card/card"
 import Testimonials from "./components/testimonials/index"
 
 import bannerData from "./assets/bannerData"
+import useToggle from './hooks/useToggle'
 
+const BannerContext = createContext()
 
 function App() {
 
   const [multiLine, setMultiLine] = useState(false)
   const [pic, setPic] = useState(true)
+  const [open, toggleOpen] = useToggle()
 
   function onClick() {
     setMultiLine(prevState => !prevState)
@@ -31,16 +34,16 @@ function App() {
       </div>
       
       <div className='bannerDiv'>
-        {
-          bannerData.map(data => {
-            return(
-              <Banner key={data.status} status={data.status} clickHandler={onClick} text={data.text}>
-                <Banner.Title status={data.status}>{data.title}</Banner.Title>
-                <Banner.Text status={data.status}>{multiLine ? data.text : ""}</Banner.Text>
-              </Banner>
-            )
-          })
-        } 
+        {bannerData.map(data => (
+          <BannerContext.Provider key={data.status} value={{ open, toggleOpen }}>
+            <Banner status={data.status} clickHandler={toggleOpen} text={data.text}>
+              <Banner.Title status={data.status}>{data.title}</Banner.Title>
+              {open && (
+                <Banner.Text status={data.status}>{data.text}</Banner.Text>
+              )}
+            </Banner>
+          </BannerContext.Provider>
+        ))}
       </div>
       
       <div className='cardDiv'>
@@ -64,3 +67,4 @@ function App() {
 }
 
 export default App
+export { BannerContext }

@@ -2,13 +2,17 @@ import { useState } from "react";
 
 function useToggle() {
     const [on, setOn] = useState(false)
+    const [hover, setHover] = useState(false)
 
-    function toggle() {
-        setOn(prevState => !prevState)
-        console.log("clicked")
+    const toggle = () => {
+        setOn((prevState) => !prevState);
+      };
+    
+    const mouseOver = () => {
+        setHover((prevState) => !prevState)
     }
 
-    return [on, toggle]
+    return [on, toggle, hover, mouseOver]
 }
 
 export default useToggle

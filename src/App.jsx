@@ -10,10 +10,12 @@ import useToggle from './hooks/useToggle'
 
 const BannerContext = createContext()
 const TestimonialContext = createContext()
+const cardContext = createContext()
 
 function App() {
   const [open, toggleOpen] = useToggle()
   const [pict, picOpen] = useToggle()
+  const [hover, mouseOver] = useToggle()
   
   return (
     <main>
@@ -37,12 +39,14 @@ function App() {
       </div>
       </BannerContext.Provider>
       
+      <cardContext.Provider value={{hover, mouseOver}}>
       <div className='cardDiv'>
         <Card className="card-comp">
           <h2 className='card-title'>Easy Development</h2>
           <p className='card-text'>Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
         </Card>
       </div>
+      </cardContext.Provider>
 
       <TestimonialContext.Provider value={{open, picOpen}}>       
       <div className='testimonialDiv'>
@@ -60,4 +64,4 @@ function App() {
 }
 
 export default App
-export { BannerContext, TestimonialContext }
+export { BannerContext, TestimonialContext, cardContext }
